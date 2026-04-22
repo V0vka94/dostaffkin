@@ -1,6 +1,4 @@
 #map {
-   /* background-image: url("../images/order-bg.png");
-    background-size: cover;*/
     position: fixed;
     inset: 0;
 }
@@ -12,7 +10,6 @@
     background: rgba(255, 255, 255, 0.96);
     left: 20px;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 0; /* reset padding */
     position: fixed;
     top: 110px;
     bottom: 20px;
@@ -31,8 +28,6 @@
 }
 
 .main-title {
-    margin-top: 0; /* reset margin */
-    left: 0; /* reset left */
     font-size: 20px;
     line-height: 100%;
     font-weight: bold;
