@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
 import { Header } from '../../header/header';
 import { DELIVERY_SIZES, DELIVERY_SPEEDS } from './order.config';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UpperCasePipe } from '@angular/common';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { DeliveryApi } from '../../services/delivery-api';
 
 declare var ymaps: any;
@@ -13,6 +13,7 @@ declare var ymaps: any;
   templateUrl: './order.html',
   styleUrl: './order.css',
 })
+
 export class Order {
   public readonly sizes = DELIVERY_SIZES;
   public readonly speeds = DELIVERY_SPEEDS;
@@ -25,6 +26,7 @@ export class Order {
 
   public orderId: any = signal(null);
   public calculationResult: any = signal(null);
+  public textLeft='';
 
   constructor(private formBuilder: FormBuilder, private deliveryApi: DeliveryApi) {
     this.routeForm = this.formBuilder.group({
@@ -155,7 +157,7 @@ export class Order {
 
       this.orderId.set(response.id);
     });
-    
+
   }
 
 }

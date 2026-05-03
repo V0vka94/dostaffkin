@@ -18,20 +18,20 @@
                 </div>
                 @if (this.routeForm.get('from')?.invalid && (this.routeForm.get('from')?.dirty ||
                 this.routeForm.get('from')?.touched)) {
-                <label for="from" class="input-error">Заполните поле Откуда</label>
+                <label for="from" class="input-error inner-popup left">⚠️ Заполните поле Откуда</label>
                 }
 
 
                 <div class="main-field" id="toField">
                     <div class="main-pin"></div>
                     <input id="to" formControlName="to" [attr.disabled]="!!orderId()"
-                        placeholder="Куда: начните вводить адрес" autocomplete="off" />
+                         placeholder="Куда: начните вводить адрес" autocomplete="off" />
                     <div class="main-ac" id="toAc" role="listbox" aria-label="Подсказки адресов"></div>
                 </div>
             </div>
             @if (this.routeForm.get('to')?.invalid && (this.routeForm.get('to')?.dirty ||
             this.routeForm.get('to')?.touched)) {
-            <label for="from" class="input-error">Заполните поле Куда</label>
+            <label for="to" class="input-error inner-popup left">⚠️ Заполните поле Куда</label>
             }
 
 
